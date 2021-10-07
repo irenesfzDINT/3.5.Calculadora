@@ -12,12 +12,14 @@
         MinHeight="300"
         MinWidth="250">
     <Grid Margin="5">
+        <!--Creo las filas y columnas-->
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
+            <!--Tamaño más pequeño a la última fila-->
             <RowDefinition Height="55"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -25,6 +27,7 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
+        <!--Añado borde a toda la pantalla del text block junto con las propiedades del Grid-->
         <Border BorderBrush="Black"
                 Margin="5"
                 BorderThickness="1"
@@ -32,19 +35,21 @@
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
                 Grid.RowSpan="2">
+            <!--Viewbox para que se vean todas las cifras en la pantalla-->
             <Viewbox HorizontalAlignment="Right">
-            <TextBlock x:Name="PantallaTextBlock"
-                       FontSize="70"
-                       HorizontalAlignment="Right"
-                        TextWrapping="WrapWithOverflow"></TextBlock>
+                <TextBlock x:Name="PantallaTextBlock"
+                           FontSize="70"
+                           HorizontalAlignment="Right"></TextBlock>
             </Viewbox>
         </Border>
+        <!--Añado botones con Tag y con evento click-->
         <Button Grid.Column="0"
                 Grid.Row="2"
                 FontSize="50"
                 Tag="1"
                 Click="Button_Click"
                 Margin="5">
+            <!--Viewbox para ajustar el tamaño de los números según las dimensiones-->
             <Viewbox>
                 <Label>1</Label>
             </Viewbox>
@@ -140,6 +145,5 @@
                 <Label>0</Label>
             </Viewbox>
         </Button>
-
     </Grid>
 </Window>
